@@ -77,7 +77,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
-                <version>2.6</version>
+                <version>2.6</version> 
             </plugin>  
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -86,8 +86,7 @@
                 <configuration>
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
-            </plugin>  
-            
+            </plugin>              
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -114,49 +113,7 @@
                     <skipTests>${skipTests}</skipTests>
                     <skipITs>${skipITs}</skipITs>                                        
                 </configuration>
-            </plugin>            
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.7.8</version>
-                <configuration>
-                    <haltOnFailure>false</haltOnFailure>                                        
-                </configuration>
-            </plugin>    
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>2.17</version>
-                <configuration>                                      
-                    <consoleOutput>true</consoleOutput>
-                    <failOnViolation>false</failOnViolation>
-                    <includeTestSourceDirectory>true</includeTestSourceDirectory> 
-                    <failsOnError>false</failsOnError>                       
-                </configuration>
-            </plugin>         
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>findbugs-maven-plugin</artifactId>
-                <version>3.0.4</version>
-                <configuration>                   
-                    <effort>Max</effort>                    
-                    <threshold>Low</threshold>                    
-                    <xmlOutput>true</xmlOutput>                    
-                    <failOnError>false</failOnError>
-                    <includeTests>true</includeTests>              
-                </configuration>                
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.7</version>
-                <configuration>
-                    <skipEmptyReport>false</skipEmptyReport>
-                    <linkXRef>false</linkXRef>
-                    <includeTests>true</includeTests>
-                    <failOnViolation>false</failOnViolation>                    
-                </configuration>
-            </plugin> 
+            </plugin>                        
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -201,7 +158,49 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>                 
+            </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.7.8</version>
+                <configuration>
+                    <haltOnFailure>false</haltOnFailure>                                        
+                </configuration>
+            </plugin>    
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>2.17</version>
+                <configuration>                                      
+                    <consoleOutput>true</consoleOutput>
+                    <failOnViolation>false</failOnViolation>
+                    <includeTestSourceDirectory>true</includeTestSourceDirectory> 
+                    <failsOnError>false</failsOnError>                       
+                </configuration>
+            </plugin>         
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <version>3.0.4</version>
+                <configuration>                   
+                    <effort>Max</effort>                    
+                    <threshold>Low</threshold>                    
+                    <xmlOutput>true</xmlOutput>                    
+                    <failOnError>false</failOnError>
+                    <includeTests>true</includeTests>              
+                </configuration>                
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.7</version>
+                <configuration>
+                    <skipEmptyReport>false</skipEmptyReport>
+                    <linkXRef>false</linkXRef>
+                    <includeTests>true</includeTests>
+                    <failOnViolation>false</failOnViolation>                    
+                </configuration>
+            </plugin>                  
         </plugins>
     </build>    
     <reporting>
