@@ -1,1 +1,1 @@
-Contribution guidelines for this project](pipeline.png)
+[GitHub](http://github.com)
